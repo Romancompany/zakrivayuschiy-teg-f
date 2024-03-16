@@ -72,7 +72,7 @@
 }
 
 .theme-menu {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .theme-menu__list {
@@ -83,6 +83,7 @@
 }
 
 .theme-menu__button {
+  position: relative;
   outline: none;
   border-color: transparent;
   text-transform: uppercase;
@@ -90,18 +91,70 @@
   font-family: var(--font-family-accent);
   font-size: 14px;
   font-weight: 400;
-  line-height: 14px;
+  line-height: 1;
   background-color: transparent;
-}
-
-.theme-menu__button::before {
-  content: "▶";
-  color: transparent;
 }
 
 .theme-menu__button:disabled::before {
   content: "▶";
-  color: var(--pointer-animation-color);
+  position: absolute;
+  color: var(--color);
+  opacity: 0.6;
+
+  animation-name: arrow;
+  animation-iteration-count: infinite;
+  animation-duration: 0.5s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes arrow {
+  0% {
+    left: -12px;
+  }
+
+  100% {
+    left: -16px;
+  }
+}
+
+.theme-menu__button:disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.theme-menu__button::after {
+  content: "";
+  display: block;
+  width: 0%;
+  /* transform: scale(0); */
+  height: 3px;
+  margin-left: -2px;
+  background-color: var(--color);
+  opacity: 0.6;
+  /*  transition: transform 0.3s; */
+  transition: width 0.3s;
+}
+
+.theme-menu__button:focus-visible::after {
+  width: 100%;
+  /* transform: scale(1); */
+}
+
+.theme-menu__button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.theme-menu__button:focus {
+  opacity: 0.6;
+  transition: opacity 0.3s;
 }
 
 .main {
@@ -129,6 +182,35 @@
   line-height: 22px;
 }
 
+.section__image {
+  position: relative;
+}
+
+.section__image-label {
+  position: absolute;
+  z-index: 10;
+  top: 26px;
+  right: 25px;
+  color: var(--color);
+  opacity: 0.6;
+  font-family: var(--font-family-accent);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+
+  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+
+  mix-blend-mode: hard-light;
+}
+
+@supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
+  .section__image-label {
+    -webkit-text-stroke: 1px #fff;
+    text-stroke: 1px #fff;
+    text-shadow: none;
+  }
+}
+
 .section img {
   display: block;
   height: 100%;
@@ -138,7 +220,7 @@
   border-block-end: 2px solid var(--color);
 }
 
-.section div {
+.section__footer {
   padding: 25px 25px 0px 25px;
 }
 
@@ -150,19 +232,47 @@
   text-align: left;
 }
 
-.card__like-button {
-  display: block;
+.section button {
   margin-left: auto;
   margin-bottom: 25px;
+  border: none;
+}
+
+.section button span {
   padding: 12px 35px 9px;
-
-  outline: none;
   border: 2px solid var(--color);
-  text-transform: capitalize;
+}
 
+.like-icon {
+  display: block;
+  width: 27px;
+  height: 24px;
+}
+
+.card__like-button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  outline: none;
   font-family: var(--font-family-accent);
   font-size: 14px;
   font-weight: 400;
   line-height: 13px;
-  background-color: transparent;
+  background-color: var(--background-color);
+}
+
+.footer {
+  background-color: aqua;
+}
+
+.footer button {
+  padding: 15px 20px;
+  border: 2px solid var(--color);
+}
+
+.floppy {
+  display: block;
+  width: 21px;
+  height: 21px;
 }

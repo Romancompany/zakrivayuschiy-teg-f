@@ -10,9 +10,6 @@
   --font-size-watermark: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   --font-size-title: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   --font-variation-settings-caption: "wght" 700;
-  --pointer-animation-color: rgb(0 0 0 / 0.6);
-  
-  /*  --watermark: "</HTML>"; */
 }
 
 /* для мобильных */

@@ -11,7 +11,6 @@
   --linear-gradient: linear-gradient(#007f0c, #004306);
   --font-variation-settings-caption: "wght" 785, "slnt" 0;
   --font-variation-settings: "wght" 465, "slnt" 0;
-  --pointer-animation-color: rgb(0 204 20 / 0.6);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,6 +21,5 @@
     --linear-gradient: linear-gradient(#007f0c, #004306);
     --font-variation-settings-caption: "wght" 785, "slnt" 0;
     --font-variation-settings: "wght" 465, "slnt" 0;
-    --pointer-animation-color: rgb(0 204 20 / 0.6);
-}
+  }
 }
