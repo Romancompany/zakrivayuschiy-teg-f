@@ -94,19 +94,16 @@
   </main>
 
 
-  <dialog id="dialog-id">
-    <h2>Подпишитесь на нашу рассылку</h2>
-    <form>
-      <label for="email">Введите вашу почту</label>
-      <button type="submit">Подписаться</button>
-      <button class="close" type="button" onclick="window['dialog-id'].close();">
-        Не подписываться
-      </button>
-    </form>
-
-    <form method="dialog">
-      <button class="close-button">
-        <span class="visually-hidden">Закрыть окно</span>
+  <dialog id="dialog-id" class="dialog">
+    <div class="dialog__header">
+      <svg class="dialog__floppy-icon" viewBox="0 0 40 40" width="39" height="39">
+        <use href="./images/floppy.svg#floppy">
+      </svg>
+      <h2 class="dialog_title">Вставьте дискету, чтобы продолжить</h2>
+    </div>
+    <form class="dialog__form">
+      <button class="button dialog__button" type="button" onclick="window['dialog-id'].close();">
+        <span class="button__text">OK</span>
       </button>
     </form>
   </dialog>
