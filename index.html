@@ -84,25 +84,24 @@
       </div>
     </section>
     <footer class="footer">
-      <button class="button" type="button" onclick="window['dialog-id'].showModal();" aria-controls="dialog-id">
-        <svg class="floppy-icon" viewBox="0 0 40 40" width="21" height="21">
+      <button class="button save-button" type="button" onclick="window['dialog-id'].showModal();" aria-controls="dialog-id">
+        <svg class="save-floppy-icon" viewBox="0 0 40 40" width="28" height="28">
           <use href="./images/floppy.svg#floppy">
         </svg>
-        <span class="button__text">Сохранить на память</span>
+        <span class="button__text inset-button">Сохранить на память</span>
       </button>
     </footer>
   </main>
 
-
   <dialog id="dialog-id" class="dialog">
     <div class="dialog__header">
-      <svg class="dialog__floppy-icon" viewBox="0 0 40 40" width="39" height="39">
+      <svg class="dialog-floppy-icon" viewBox="0 0 40 40" width="39" height="39">
         <use href="./images/floppy.svg#floppy">
       </svg>
-      <h2 class="dialog_title">Вставьте дискету, чтобы продолжить</h2>
+      <h2 class="dialog__title">Вставьте дискету, чтобы продолжить</h2>
     </div>
     <form class="dialog__form">
-      <button class="button dialog__button" type="button" onclick="window['dialog-id'].close();">
+      <button class="button ok-button" type="button" onclick="window['dialog-id'].close();">
         <span class="button__text">OK</span>
       </button>
     </form>

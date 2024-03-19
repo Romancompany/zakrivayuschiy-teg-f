@@ -386,23 +386,26 @@
   }
 }
 
-.footer .button {
-  height: 55px;
-  width: 335px;
+.save-button {
+  height: var(--height-button);
+  width: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
 }
 
-.floppy-icon {
+.save-floppy-icon {
   position: absolute;
   z-index: 1;
+  display: block;
   top: 15px;
-  left: 15px;
+  height: var(--height-floppy-icon);
+  left: var(--left-floppy-icon);
   color: var(--color-like);
   mix-blend-mode: difference;
 }
 
-.footer .button__text {
-  top: 10px;
-  left: 18px;
+.inset-button {
+  top: var(--top-inset-button);
+  left: var(--left-inset-button);
+  inset: var(--inset-text-button);
 }
 
 .dialog {
@@ -422,7 +425,6 @@
 
 .dialog::backdrop {
   background-color: rgb(0 0 0 / 0.7);
-  /*backdrop-filter: blur(7px);*/
 }
 
 .dialog__header {
@@ -432,13 +434,13 @@
   margin-bottom: 30px;
 }
 
-.dialog__floppy-icon {
+.dialog-floppy-icon {
   display: block;
   width: 30%;
   color: var(--color);
 }
 
-.dialog_title {
+.dialog__title {
   font-family: var(--font-family-accent);
   font-size: 14px;
   font-weight: 400;
@@ -447,8 +449,20 @@
   color: var(--color);
 }
 
-.dialog__button {
+.ok-button {
   width: 100%;
   height: 38px;
   padding: 9px 17px;
+}
+
+/* для мобильных */
+@media (width <= 375px) {
+  :root {
+    --font-size-watermark: clamp(0.3125rem, -0.1106rem + 13.5385vw, 3.0625rem);
+    --font-size-title: clamp(0.3125rem, 0.226rem + 2.7692vw, 0.875rem);
+    --height-button: 84px;
+    --height-floppy-icon: 28px;
+    --left-floppy-icon: 135px;
+    --inset-text-button: 40px auto;
+}
 }

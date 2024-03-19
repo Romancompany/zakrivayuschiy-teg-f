@@ -12,12 +12,10 @@
   --font-size-title: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   --font-variation-settings-caption: "wght" 700;
   --sparks: #FF0000;
+  --height-button: 55px;
+  --height-floppy-icon: 21px;
+  --left-floppy-icon: 15px;
+  --inset-text-button: 8px auto auto 18px;
 }
 
-/* для мобильных */
-@media (width <= 375px) {
-  :root {
-    --font-size-watermark: clamp(0.3125rem, -0.1106rem + 13.5385vw, 3.0625rem);
-    --font-size-title: clamp(0.3125rem, 0.226rem + 2.7692vw, 0.875rem);
-  }
-}
+
