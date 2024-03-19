@@ -5,11 +5,13 @@
   --font-variation-settings: "wght" 400;
   --color: #000;
   --background-color: #fff;
+  --color-like: #fff;
   --repeating-linear-gradient-color: #d3d3d3;
   --linear-gradient: linear-gradient(#e7e7e7 0.01%, #e7e7e7, #1a1a1a);
   --font-size-watermark: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   --font-size-title: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   --font-variation-settings-caption: "wght" 700;
+  --sparks: #FF0000;
 }
 
 /* для мобильных */

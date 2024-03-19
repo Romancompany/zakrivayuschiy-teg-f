@@ -7,6 +7,7 @@
 :root.theme-dark {
   --color: #00cc14;
   --background-color: #000;
+  --color-like: #00cc14;
   --repeating-linear-gradient-color: #000;
   --linear-gradient: linear-gradient(#007f0c, #004306);
   --font-variation-settings-caption: "wght" 785, "slnt" 0;
@@ -17,6 +18,7 @@
   :root {
     --color: #00cc14;
     --background-color: #000;
+    --color-like: #00cc14;
     --repeating-linear-gradient-color: #000;
     --linear-gradient: linear-gradient(#007f0c, #004306);
     --font-variation-settings-caption: "wght" 785, "slnt" 0;
