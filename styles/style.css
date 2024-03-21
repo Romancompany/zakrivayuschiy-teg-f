@@ -162,7 +162,7 @@
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
-  row-gap: 50px;
+  row-gap: 49px;
   margin-bottom: 25px;
 }
 
@@ -222,7 +222,7 @@
 }
 
 .section__content-text {
-  margin-bottom: 25px;
+  margin-bottom: 27px;
   font-size: 18px;
   font-weight: 465;
   line-height: 21px;
@@ -235,7 +235,6 @@
   height: 38px;
   display: flex;
   justify-content: flex-end;
-  gap: 6px;
 }
 
 .button {
@@ -463,6 +462,6 @@
     --height-button: 84px;
     --height-floppy-icon: 28px;
     --left-floppy-icon: 135px;
-    --inset-text-button: 40px auto;
+    --inset-text-button: 38px auto auto 0px;
 }
 }
