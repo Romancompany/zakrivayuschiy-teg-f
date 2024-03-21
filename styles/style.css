@@ -216,6 +216,34 @@
   border-block-end: 2px solid var(--color);
 }
 
+.sprint-html-clear {
+  filter: grayscale(0.8);
+}
+
+.sprint-css {
+  filter: hue-rotate(10deg);
+}
+
+.sprint-desigions {
+  filter: opacity(0.8);
+}
+
+.sprint-care {
+  filter: invert(0.8);
+}
+
+.sprint-support{
+  filter: saturate(20%);
+}
+
+.sprint-lifes-style {
+  filter: blur(0.1rem);
+}
+
+.sprint-experience {
+  filter: contrast(80%) hue-rotate(90deg) opacity(0.6);
+}
+
 .section__content {
   padding: 25px 25px 0px 25px;
   margin-bottom: 25px;
@@ -452,6 +480,27 @@
   width: 100%;
   height: 38px;
   padding: 9px 17px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(0, 0, 0, 0);
+}
+
+.close-button {
+  position: absolute;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  inset-block-start: 0px;
+  inset-inline-end: 0px;
+  inline-size: 0px;
 }
 
 /* для мобильных */
