@@ -232,12 +232,12 @@
   filter: invert(0.8);
 }
 
-.sprint-support{
+.sprint-support {
   filter: saturate(20%);
 }
 
 .sprint-lifes-style {
-  filter: blur(0.1rem);
+  filter: blur(0.7rem);
 }
 
 .sprint-experience {
@@ -512,5 +512,5 @@
     --height-floppy-icon: 28px;
     --left-floppy-icon: 135px;
     --inset-text-button: 38px auto auto 0px;
-}
+  }
 }
