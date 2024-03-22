@@ -12,3 +12,107 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+@keyframes arrow {
+  0% {
+    left: -12px;
+  }
+
+  100% {
+    left: -16px;
+  }
+}
+
+.card__icon-button {
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--color);
+}
+
+.contour {
+  transition: fill 0.3s 60ms linear;
+}
+
+.core {
+  fill: transparent;
+  transition: fill 0.3s 50ms linear;
+}
+
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s 100ms linear;
+}
+
+.like-icon:hover .main-body,
+.like-icon:hover .core {
+  fill: var(--color);
+}
+
+.like-icon:active .main-body,
+.like-icon:active .core {
+  fill: var(--sparks);
+}
+
+.sparks {
+  opacity: 0;
+  fill: var(--sparks);
+}
+
+.like-icon.is-liked .main-body,
+.like-icon.is-liked .core {
+  fill: var(--sparks);
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--sparks);
+}
+
+.like-icon.is-liked {
+  animation-name: heart;
+  animation-delay: 100ms;
+  animation-duration: 300ms;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+}
+
+@keyframes heart {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.like-icon.is-liked .sparks {
+  animation-name: sparks;
+  animation-delay: 300ms;
+  animation-duration: 300ms;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+}
+
+@keyframes sparks {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
