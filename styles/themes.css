@@ -25,3 +25,13 @@
     --font-variation-settings: "wght" 465, "slnt" 0;
   }
 }
+
+:root.theme-light {
+  --color: #000;
+  --background-color: #fff;
+  --color-like: #fff;
+  --repeating-linear-gradient-color: #d3d3d3;
+  --linear-gradient: linear-gradient(#e7e7e7 0.01%, #e7e7e7, #1a1a1a);
+  --font-variation-settings-caption: "wght" 700;
+  --font-variation-settings: "wght" 400;
+}

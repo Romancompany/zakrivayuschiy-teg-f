@@ -38,6 +38,8 @@
       transparent 4px
     ),
     var(--linear-gradient);
+  background-attachment: fixed;
+  background-color: var(--background-color);
 }
 
 .header {
@@ -177,8 +179,8 @@
 .section__picture-label {
   position: absolute;
   z-index: 1;
-  top: 26px;
-  right: 25px;
+  top: clamp(1.25rem, 1.162rem + 0.3756vw, 1.5rem);
+  right: clamp(0.625rem, 0.2949rem + 1.4085vw, 1.5625rem);
   color: var(--color);
   opacity: 0.5;
   font-family: var(--font-family-accent);
@@ -254,6 +256,12 @@
   justify-content: flex-end;
 }
 
+.footer {
+  margin: 50px auto 84px;
+  display: flex;
+  justify-content: center;
+}
+
 .button {
   cursor: pointer;
   position: relative;
@@ -274,7 +282,6 @@
 
 .button::before {
   position: absolute;
-  z-index: 1;
   content: "";
   display: block;
   top: 0px;
@@ -296,14 +303,9 @@
   outline: none;
   border: none;
   padding: 0;
-  position: absolute;
   display: block;
-  z-index: 1;
   left: 0px;
   top: 0px;
-  width: 100%;
-  height: 100%;
-  padding-top: 12px;
   color: var(--color-like);
   mix-blend-mode: difference;
 }
@@ -311,27 +313,22 @@
 .save-button {
   height: var(--height-button);
   width: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
+  padding: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 
 .save-floppy-icon {
-  position: absolute;
-  z-index: 1;
   display: block;
-  top: 15px;
   height: var(--height-floppy-icon);
-  left: var(--left-floppy-icon);
   color: var(--color-like);
   mix-blend-mode: difference;
 }
 
-.inset-button {
-  top: var(--top-inset-button);
-  left: var(--left-inset-button);
-  inset: var(--inset-text-button);
-}
-
 .dialog {
-  position: fixed;
   inset: 0;
   padding: 35px;
   border: 2px solid var(--color);
@@ -377,27 +374,6 @@
   padding: 9px 17px;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  overflow: hidden;
-  clip-path: inset(0, 0, 0, 0);
-}
-
-.close-button {
-  position: absolute;
-  border: none;
-  padding: 0;
-  background-color: transparent;
-  inset-block-start: 0px;
-  inset-inline-end: 0px;
-  inline-size: 0px;
-}
-
 /* для мобильных */
 @media (width <= 375px) {
   :root {
@@ -405,7 +381,5 @@
     --font-size-title: clamp(0.3125rem, 0.226rem + 2.7692vw, 0.875rem);
     --height-button: 84px;
     --height-floppy-icon: 28px;
-    --left-floppy-icon: 135px;
-    --inset-text-button: 38px auto auto 0px;
   }
 }
