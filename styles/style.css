@@ -257,7 +257,7 @@
 }
 
 .footer {
-  margin: 50px auto 105px; 
+  margin: 50px auto 105px;
   display: flex;
   justify-content: center;
 }
@@ -266,7 +266,7 @@
   cursor: pointer;
   position: relative;
   outline: none;
-  padding: 5px 35px;
+  min-inline-size: 130px;
   border: 2px solid var(--color);
   font-family: var(--font-family-accent);
   font-size: 14px;
@@ -296,7 +296,7 @@
 
 .button:hover::before {
   content: "";
-  transform: scale(1.01, 1);
+  transform: scale(1.005, 1);
 }
 
 .button__text {
@@ -311,7 +311,6 @@
 }
 
 .save-button {
-  padding: 15px 20px;
   width: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
   padding: 12px;
   display: flex;
