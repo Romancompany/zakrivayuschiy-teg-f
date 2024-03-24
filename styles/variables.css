@@ -12,8 +12,8 @@
   --font-size-title: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   --font-variation-settings-caption: "wght" 700;
   --sparks: #FF0000;
-  --height-button: 55px;
   --height-floppy-icon: 21px;
+  --inline-padding-dialog: 30px;
 }
 
 

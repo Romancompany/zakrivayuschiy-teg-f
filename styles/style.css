@@ -257,7 +257,7 @@
 }
 
 .footer {
-  margin: 50px auto 84px;
+  margin: 50px auto 105px; 
   display: flex;
   justify-content: center;
 }
@@ -266,7 +266,7 @@
   cursor: pointer;
   position: relative;
   outline: none;
-  min-inline-size: 130px;
+  padding: 5px 35px;
   border: 2px solid var(--color);
   font-family: var(--font-family-accent);
   font-size: 14px;
@@ -296,7 +296,7 @@
 
 .button:hover::before {
   content: "";
-  transform: scale(1, 1);
+  transform: scale(1.01, 1);
 }
 
 .button__text {
@@ -311,14 +311,18 @@
 }
 
 .save-button {
-  height: var(--height-button);
+  padding: 15px 20px;
   width: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
   padding: 12px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 10px;
+  max-inline-size: 335px;
+  min-inline-size: 306px;
+  max-block-size: 84px;
+  min-block-size: 55px;
 }
 
 .save-floppy-icon {
@@ -328,13 +332,18 @@
   mix-blend-mode: difference;
 }
 
-.dialog {
+.dialog[open] {
+  display: grid;
+  gap: 30px;
+  position: fixed;
   inset: 0;
-  padding: 35px;
-  border: 2px solid var(--color);
-  inline-size: clamp(21.3125rem, 20.9604rem + 1.5023vw, 22.3125rem);
-  background-color: var(--background-color);
   transition: opacity 0.3s ease-in-out;
+  padding: 30px var(--inline-padding-dialog);
+  border: 2px solid var(--color);
+  max-inline-size: 353px;
+  inline-size: clamp(21.3125rem, 20.9604rem + 1.5023vw, 22.3125rem);
+  min-inline-size: 341px;
+  background-color: var(--background-color);
 }
 
 .dialog:not([open]) {
@@ -348,14 +357,12 @@
 
 .dialog__header {
   display: flex;
-  align-items: center;
   gap: 20px;
-  margin-bottom: 30px;
 }
 
 .dialog-floppy-icon {
-  display: block;
-  width: 30%;
+  height: 100%;
+  width: 39px;
   color: var(--color);
 }
 
@@ -372,6 +379,8 @@
   width: 100%;
   height: 38px;
   padding: 9px 17px;
+  max-inline-size: 293px;
+  min-inline-size: 257px;
 }
 
 /* для мобильных */
@@ -379,7 +388,7 @@
   :root {
     --font-size-watermark: clamp(0.3125rem, -0.1106rem + 13.5385vw, 3.0625rem);
     --font-size-title: clamp(0.3125rem, 0.226rem + 2.7692vw, 0.875rem);
-    --height-button: 84px;
     --height-floppy-icon: 28px;
+    --inline-padding-dialog: 40px;
   }
 }
